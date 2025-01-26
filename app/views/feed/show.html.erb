@@ -1,0 +1,36 @@
+<div class="min-h-screen bg-gradient-to-b from-black to-gray-800 py-10">
+  <div class="flex flex-col mx-auto justify-between mt-5 items-center">
+  <h1 class="font-bold text-4xl mt-16 text-white">Feed is Ready</h1>
+  <p class="text-white">Your feed is ready and updated, enjoy the ride!</p>
+    <div class="w-full max-w-7xl mx-auto px-4">
+    <!-- Notice Alert -->
+    <% if notice.present? %>
+      <div class="mb-6">
+        <p class="py-2 px-3 bg-green-50 text-green-700 font-medium rounded-md inline-block" id="notice"><%= notice %></p>
+      </div>
+    <% end %>
+
+    <!-- Header Section -->
+    <div class="flex justify-between items-center mb-8">
+      <h1 class="font-bold text-4xl text-white">Recent Posts</h1>
+      <%= link_to "New post", new_post_path, class: "rounded-md px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-medium transition duration-200 ease-in-out" %>
+    </div>
+
+    <!-- Posts List -->
+    <div id="posts" class="space-y-6">
+      <% if @posts.any? %>
+        <% @posts.each do |post| %>
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <%= render post %>
+            <div class="mt-4">
+              <%= link_to "Show this post", post, class: "rounded-md px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium transition duration-200 ease-in-out" %>
+            </div>
+          </div>
+        <% end %>
+      <% else %>
+        <p class="text-center text-gray-300 my-10">No posts found.</p>
+      <% end %>
+    </div>
+  </div>
+  </div>
+</div>
