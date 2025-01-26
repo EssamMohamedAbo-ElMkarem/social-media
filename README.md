@@ -74,7 +74,7 @@ Follow these steps to set up the F1 Social Media application on your local machi
 - Rails (version 8.0.1)
 - SQLite (version 3.x or higher)
 - Node.js (for JavaScript runtime)
-- Yarn (for managing JavaScript dependencies)
+- npm (for managing JavaScript dependencies)
 
 ### Step 1: Clone the Repository
 
@@ -97,7 +97,7 @@ Follow these steps to set up the F1 Social Media application on your local machi
 2. Install JavaScript dependencies using Yarn:
 
    ```bash
-   yarn install
+   npm install
    ```
 
 ### Step 3: Set Up the Database
@@ -154,18 +154,29 @@ Follow these steps to set up the F1 Social Media application on your local machi
 
 ### Homepage
 
+<img width="934" alt="home" src="https://github.com/user-attachments/assets/9677c676-fe73-47e0-8631-0829411a77b9" />
+
 
 ### Sign Up Page
+
+<img width="892" alt="signup" src="https://github.com/user-attachments/assets/3ed6bdbc-f1fa-4ee0-9061-759cd2dba279" />
 
 
 ### Login Page
 
+<img width="925" alt="login" src="https://github.com/user-attachments/assets/719bc413-e47d-41dc-a449-b91ff1669199" />
 
 ### Posts Feed
 
+<img width="781" alt="post" src="https://github.com/user-attachments/assets/057cefd8-ad89-4bf3-8fb2-c611d16b3a9b" />
 
 ### New Post Form
 
+<img width="905" alt="create_post" src="https://github.com/user-attachments/assets/6224a858-d4ee-4c81-9178-237ad30b564a" />
+
+### New Edit Post Form
+
+<img width="791" alt="edit_post" src="https://github.com/user-attachments/assets/63547548-c0b2-47b8-a8d0-f0b2b999071f" />
 
 ---
 
