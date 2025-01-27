@@ -1,6 +1,6 @@
 <% content_for :title, "New post" %>
 
-<div class="w-full h-full", style="background-image: url('<%= asset_path("mclaren.jpg") %>');">
+<div class="w-full min-h-screen", style="background-image: url('<%= asset_path("mclaren.jpg") %>');">
   <div class="md:w-2/3 w-full mx-auto p-6">
     <div class="w-full flex flex-col items-center justify-center space-y-6">
       <h1 class="font-bold text-4xl text-white mb-4">New Post</h1>
@@ -10,7 +10,7 @@
       </div>
 
       <div class="w-full text-center mt-6">
-        <%= link_to "Back to Feed", posts_path, class: "rounded-md px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium transition duration-200 ease-in-out" %>
+        <%= link_to "Back to Feed", feed_path, class: "rounded-md px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium transition duration-200 ease-in-out" %>
       </div>
     </div>
   </div>

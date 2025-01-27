@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+  get "comments/create"
+  get "reacts/create"
   resources :posts
+  resources :comments
+  resource :feed, only: [ :show ], controller: "feed"
+  post "/reacts", to: "reacts#create"
   devise_for :users
   get "pages/home"
   get "pages/about"

@@ -6,6 +6,18 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def create_comment
+    @post = current_user.posts.find(params[:post_id])
+    @comment = @post.comments.build(comment_params)
+
+    if @comment.save
+      # This could either redirect or use Turbo to render the comment dynamically
+      redirect_to post_path(@post)
+    else
+      render :show
+    end
+  end
+
   # GET /posts/1 or /posts/1.json
   def show
     @post = Post.find(params.expect(:id))
@@ -67,5 +79,9 @@ class PostsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def post_params
       params.expect(post: [ :caption, :body, images: [] ])
+    end
+
+    def comment_params
+      params.require(:comment).permit(:content)
     end
 end
