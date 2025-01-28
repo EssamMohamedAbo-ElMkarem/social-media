@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
-  get "comments/create"
   get "reacts/create"
-  resources :posts
-  resources :comments
+  resources :posts do
+    resources :comments, only: [ :new, :create ], module: :posts
+  end
   resource :feed, only: [ :show ], controller: "feed"
+  resources :chats, only: [ :index ]
+
+  namespace :chats do
+    resource :user_search, only: [ :create ], controller: :user_search
+    resources :chat_requests, only: [ :new ] do
+      post "create_message", to: "chat_requests#create_message", as: "create_message"
+    end
+  end
+  resources :messages, only: [ :create ]
   post "/reacts", to: "reacts#create"
   devise_for :users
   get "pages/home"
@@ -24,4 +33,5 @@ Rails.application.routes.draw do
   end
   # Defines the root path route ("/")
   root "pages#home"
+  # match "*path", to: "errors#not_found", via: :all
 end

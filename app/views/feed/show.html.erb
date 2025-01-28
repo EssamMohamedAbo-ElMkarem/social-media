@@ -23,14 +23,23 @@
             <div class="bg-white shadow-lg rounded-lg p-6">
               <div class="w-full flex flex-row">
                 <%= render post %>
-                <div class="space-y-4 ml-4 w-1/3">
-                  <h2 class="text-xl font-semibold">Comments</h2>
-                  <%= render "comments_form", comment: Comment.new %>
-
-                  <!-- Comments List -->
-                  <div class="space-y-4">
+                <div class="w-1/3 ml-8 mt-8">
+                  <%= turbo_frame_tag :comments do %>
+                    <div class="flex flex-row items-center justify-evenly gap-x-4">
+                      <%= link_to "Leave a Comment", new_post_comment_path(post), class: "rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white inline-block font-medium cursor-pointer" %>
+                      <p> <%= "#{post.comments.count} Comments" %> </p>
+                    </div>
+                    
+                  <% end %>
+                  <div class="space-y-4 mt-8">
                     <% post.comments.each do |comment| %>
-                      <%= render comment %>
+                      <div id="<%= dom_id comment %>" class="p-4 bg-gray-100 rounded-lg shadow">
+                          <div class="flex justify-between items-start">
+                            <p class="text-gray-500">By: <%= comment.user.email.split("@").first %></p>
+                          </div>
+                          <p class="text-gray-700"><%= comment.content %></p>
+                          <p class="mt-2 text-sm text-gray-500">Posted on <%= time_ago_in_words(comment.created_at) %></p>
+                      </div>
                     <% end %>
                   </div>
                 </div>

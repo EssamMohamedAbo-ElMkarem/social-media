@@ -1,0 +1,14 @@
+<%= turbo_frame_tag :comments do %>
+  <%= form_with model: [@post, @post.comments.new] do |form| %>
+    <div class="my-5 gap-y-4">
+      <%= form.label :content, "Leave a Comment", class: "text-lg mb-4 font-semibold" %>
+      <%= form.rich_text_area :content, class: "block shadow rounded-md border outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+
+    <div class="w-full flex justify-between items-center">
+      <%= form.submit class: "rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white inline-block font-medium cursor-pointer" %>
+      <%= link_to "Cancel", "/feed", class: "bg-gray-500 rounded-lg text-white text-sm px-4 py-2" %>
+    </div>
+  <% end %>
+<% end %>
+

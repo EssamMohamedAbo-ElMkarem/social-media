@@ -1,0 +1,27 @@
+<div class="min-h-screen bg-gradient-to-b from-black to-gray-800 py-10">
+  <div class="flex flex-col mx-auto justify-between mt-5 items-center">
+    <h1 class="font-bold text-4xl mt-16 text-white">Chats!🏎️🏁</h1>
+    <p class="text-white mt-8">Your chat playground is ready and updated, enjoy the ride!</p>
+    <div class="w-full max-w-4xl mx-auto px-4 mt-8">
+      <!-- Notice Alert -->
+      <% if notice.present? %>
+        <div class="mb-6">
+          <p class="py-2 px-3 bg-green-50 text-green-700 font-medium rounded-md inline-block" id="notice"><%= notice %></p>
+        </div>
+      <% end %>
+
+      <!-- Header Section -->
+      <div class="flex justify-between items-center mb-8">
+        <h1 class="font-bold text-4xl text-white">Recent Chats</h1>
+        <%= link_to "New Chat", '#', class: "rounded-md px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-medium transition duration-200 ease-in-out" %>
+      </div>
+      <div class="w-full flex flex-col gap-y-4">
+        <%= form_with url: chats_user_search_path do |form| %>
+            <%= form.text_field :query, placeholder: "  Search for user to connect", class: "rounded-lg w-full mb-4" %>
+            <%= form.submit "Search", class: "rounded-md px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-medium transition duration-200 ease-in-out" %>
+        <% end %>
+      </div>
+      <div id="user_results" class="w-full flex flex-col gap-y-2 mt-8"></div>
+    </div>
+  </div>
+</div>
