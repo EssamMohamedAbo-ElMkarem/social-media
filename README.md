@@ -119,17 +119,6 @@ Follow these steps to set up the F1 Social Media application on your local machi
    ```bash
    rails db:seed
    ```
-
-### Step 4: Configure Environment Variables
-
-1. Create a `.env` file in the root directory of the project.
-2. Add the following environment variables (if needed):
-
-   ```plaintext
-   # Example environment variables
-   SECRET_KEY_BASE=your_secret_key_base
-   ```
-
 ---
 
 ## Running the Application
@@ -154,13 +143,11 @@ Follow these steps to set up the F1 Social Media application on your local machi
 
 ### Homepage
 
-<img width="934" alt="home" src="https://github.com/user-attachments/assets/9677c676-fe73-47e0-8631-0829411a77b9" />
-
+<img width="734" alt="image" src="https://github.com/user-attachments/assets/2199f1d7-1cca-491a-9887-b9924354e761" />
 
 ### Sign Up Page
 
 <img width="892" alt="signup" src="https://github.com/user-attachments/assets/3ed6bdbc-f1fa-4ee0-9061-759cd2dba279" />
-
 
 ### Login Page
 
@@ -168,13 +155,25 @@ Follow these steps to set up the F1 Social Media application on your local machi
 
 ### Posts Feed
 
-<img width="781" alt="post" src="https://github.com/user-attachments/assets/057cefd8-ad89-4bf3-8fb2-c611d16b3a9b" />
+<img width="645" alt="image" src="https://github.com/user-attachments/assets/d5a1eb28-5bfd-40d8-af6b-ef7f8bd1e06a" />
+
+### Edit Propfile
+
+<img width="694" alt="image" src="https://github.com/user-attachments/assets/5f53bf6e-2177-4615-86e0-64a715e4a680" />
+
+### User Search
+
+<img width="664" alt="image" src="https://github.com/user-attachments/assets/95eef3a7-9632-421a-bf17-b31dc47986e9" />
+
+### Chat Messages
+
+<img width="710" alt="image" src="https://github.com/user-attachments/assets/e99eada2-e495-496e-baa7-61fda47c3a59" />
 
 ### New Post Form
 
 <img width="905" alt="create_post" src="https://github.com/user-attachments/assets/6224a858-d4ee-4c81-9178-237ad30b564a" />
 
-### New Edit Post Form
+### Edit Post Form
 
 <img width="791" alt="edit_post" src="https://github.com/user-attachments/assets/63547548-c0b2-47b8-a8d0-f0b2b999071f" />
 
@@ -228,6 +227,5 @@ Enjoy using the F1 Social Media application! If you have any questions or feedba
 2. **Rails Version**: Updated to Rails 8.0.1.
 3. **Ruby Version**: Updated to Ruby 3.4.1.
 4. **Placeholder Images**: Replace the placeholder image paths with actual screenshots once available.
-5. **Environment Variables**: Added an example for `SECRET_KEY_BASE` in case you need to configure additional environment variables.
 
 Let me know if you need further adjustments! 🚀
