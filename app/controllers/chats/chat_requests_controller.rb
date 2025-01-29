@@ -17,15 +17,5 @@ module Chats
         Rails.logger.info("Found existing conversation: #{@conversation.id}")
       end
     end
-
-    def create_message
-      @chat = ChatConversation.find(params[:message][:chat_id])
-      @message = @chat.messages.new(content: params[:message][:content], sender_id: current_user.id)
-      if @message.save
-        redirect_to @chat, notice: "Message sent successfully."
-      else
-        render :new, alert: "There was an error sending your message."
-      end
-    end
   end
 end

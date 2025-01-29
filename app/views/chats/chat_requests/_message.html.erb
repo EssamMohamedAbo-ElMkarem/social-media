@@ -1,0 +1,17 @@
+<% if message.user.id == current_user.id %>
+  <!-- Current User Message -->
+  <div class="flex justify-end">
+    <div class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600 text-white p-4 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-lg">
+      <strong>You</strong>
+      <p><%= message.content %></p>
+    </div>
+  </div>
+<% else %>
+  <!-- Other User Message -->
+  <div class="flex justify-start">
+    <div class="bg-gray-200 text-gray-900 p-4 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-lg">
+      <strong><%= message.user.email.split("@").first %></strong>
+      <p><%= message.content %></p>
+    </div>
+  </div>
+<% end %>
