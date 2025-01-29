@@ -167,7 +167,7 @@ Follow these steps to set up the F1 Social Media application on your local machi
 
 ### Chat Messages
 
-<img width="710" alt="image" src="https://github.com/user-attachments/assets/e99eada2-e495-496e-baa7-61fda47c3a59" />
+<img width="934" alt="image" src="https://github.com/user-attachments/assets/32cb0551-28b4-4f2f-a09d-6b52b568aef6" />
 
 ### New Post Form
 
