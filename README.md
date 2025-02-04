@@ -169,10 +169,6 @@ Follow these steps to set up the F1 Social Media application on your local machi
 
 <img width="934" alt="image" src="https://github.com/user-attachments/assets/32cb0551-28b4-4f2f-a09d-6b52b568aef6" />
 
-### New Post Form
-
-<img width="905" alt="create_post" src="https://github.com/user-attachments/assets/6224a858-d4ee-4c81-9178-237ad30b564a" />
-
 ### Edit Post Form
 
 <img width="791" alt="edit_post" src="https://github.com/user-attachments/assets/63547548-c0b2-47b8-a8d0-f0b2b999071f" />
