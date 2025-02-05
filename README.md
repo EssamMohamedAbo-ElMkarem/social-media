@@ -173,6 +173,10 @@ Follow these steps to set up the F1 Social Media application on your local machi
 
 <img width="791" alt="edit_post" src="https://github.com/user-attachments/assets/63547548-c0b2-47b8-a8d0-f0b2b999071f" />
 
+### rubocop | brakeman Checks
+
+<img width="505" alt="image" src="https://github.com/user-attachments/assets/b8c50786-90c1-4088-beeb-e921a6b22f87" />
+
 ---
 
 ## Contributing
